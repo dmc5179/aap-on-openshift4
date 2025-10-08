@@ -1,0 +1,10 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: galaxy-bucket-claim
+  namespace: aap
+spec:
+  generateBucketName: galaxy-bucket
+  storageClassName: openshift-storage.noobaa.io
+  # You can also specify a reclaimPolicy, e.g., "Delete" or "Retain"
+  reclaimPolicy: Delete
